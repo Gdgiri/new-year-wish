@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #282c34;
+  color: #fff;
+}
+
+#app {
+  margin-top: 100px;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 5px;
+  color: #000;
+}
+
+#countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.countdown-text {
+  font-size: 10rem;
+  font-weight: bold;
+  color: #ffde59;
+  text-shadow: 3px 3px 0 #ff3d00, 6px 6px 0 #ff3d00, 9px 9px 0 #ff3d00;
+  transform: perspective(300px) rotateX(10deg);
+}
+
+#popup-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #ffde59;
+  color: #000;
+  padding: 30px 50px;
+  border-radius: 15px;
+  animation: blast 1s ease-out;
+}
+
+@keyframes blast {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 1;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 1);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  }
+}
